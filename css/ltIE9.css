@@ -1,0 +1,37 @@
+/* ------------------------------------------
+  OLD IE STYLES
+--------------------------------------------- */
+
+.js .nav-collapse {
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-collapse {
+  float: right;
+  width: auto;
+}
+
+.nav-collapse li {
+  width: auto;
+}
+
+.nav-collapse a {
+  border-left: 1px solid #fff;
+  padding: 1.02em 2em;
+  text-align: center;
+  border-top: 0;
+  float: left;
+  width: auto;
+  margin: 0;
+}
+
+.row { clear: both; margin: 0 auto; padding: 0 auto; max-width: 64em; overflow: auto; }
+.grid-2 { float: left; margin: 0 .5em; padding: 0 auto; width: 9.5em; }
+.grid-4 { float: left; margin: 0 .5em; padding: 0 auto; width: 20em; }
+.grid-5 { float: left; margin: 0 .5em; padding: 0 auto; width: 25em; }
+.grid-6 { float: left; margin: 0 .8em; padding: 0 auto; width: 30em; }
+.grid-12 { margin: 1em .5em; padding: 0 auto; width: 62em;}

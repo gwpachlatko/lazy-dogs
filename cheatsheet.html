@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="utf-8" />
+<title>Lazy Dogs &#8212; Cheat Sheet for a Single&#8211;page Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="http://fonts.googleapis.com/css?family=Alegreya:400" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Alegreya+Sans:400,400italic" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/px-video.css" media="all" />
+<link rel="stylesheet" href="css/demo30max.css" media="all" />
+<link rel="stylesheet" href="css/demo30min.css" media="all and (min-width: 33.236em)" />
+<!--[if (lt IE 9) & (!IEMobile)]>
+<link rel="stylesheet" href="css/ltIE9.css" media="all">
+<![endif]-->
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="apple-touch-icon" type="image/ico" href="apple-touch-icon.png" />
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/responsive-nav.min.js"></script>
+
+<!-- COPY CODE TO CLIPBOARD -->
+<script src="js/clipboard.min.js"></script>
+<!-- End of COPY CODE TO CLIPBOARD -->
+  </head>
+  <body>
+
+<header class="banner fixed">
+  <h1 class="logo">Lazy Dogs</h1>
+    <p class="screenreader">Cheat Sheet for a Single&#8211;page Website</p>
+
+    <nav class="nav-collapse">
+      <ul>
+    <li><a class="screenreader" href="#intro">Skip Naviagation</a></li>
+    <li class="menu-item"><a href="#intro">Intro</a></li>
+    <li class="menu-item"><a href="#structure">Structure</a></li>
+    <li class="menu-item"><a href="#typography">Typography</a></li>
+    <li class="menu-item"><a href="#tables">Tables</a></li>
+    <li class="menu-item"><a href="#lists">Lists</a></li>
+    <li class="menu-item"><a href="#media">Media</a></li>
+    <li class="menu-item"><a href="#services">Services</a></li>
+    <li class="menu-item"><a href="#resources">Resources</a></li>
+    </ul>
+
+    </nav>
+    </header><!-- /header -->
+
+<div role="main" class="content">
+<section id="intro">
+<div class="row">
+  <div class="section-header intro">
+    <div class="headline">
+    <h2>Introduction</h2>
+    <p>Infamous first words</p>
+    </div><!-- /headline -->
+  </div><!-- /section-header -->
+</div><!-- /row -->
+
+<div class="row section-body">
+  <div class="grid-6">
+    <h3>The Concept</h3>
+    <p>The design concept applied here is not exactly rocket science. Basically, it is a combination of a simplified grid (<abbr title="that is (to say)">i.e.</abbr>, an outrageously stripped down &#8220;960&#8221; approach), and the &#8220;Goldilocks Approach to Responsive Web Design&#8221; as proposed by Chris Armstrong.</p>
+    <p>Websites should <strong>always cater to users rather than devices</strong>. Thus, the &#8220;<abbr>GL</abbr> Approach&#8221; is utterly device agnostic. Its primary goal is to keep lines of text as close as possible (and the screen estate allows) to the width recommended for easy reading (<abbr>appr.</abbr> 30<abbr>em</abbr> or 60 characters).</p>
+    <p>So unless vendors decide to come out with round screens, or you have to create fancy layouts, you should be covered.</p>
+    <p>The idea behind this approach is to give the developer a quick&#8211;and&#8211;dirty solution, but enough wiggle room to position elements to effect. A very convenient side&#8211;effect is the massive reduction of necessary code to accomplish the task.</p>
+    <p>Visiting quite a number of one&#8211;page websites (<abbr title="also known as">a.k.a.</abbr> &#8220;landing pages&#8221;) of late, I figured that most developers appear to be content with a rather small variety of design options; many of the commands their style sheets provided, were simply not used. This brought me to cut down the lot to the most popular ones: rows that cover the entire width, or are shared by two or three elements. For variety (or special design needs, really), I added two more grid elements (see in <a href="#grid">&#8220;How to Use this Website&#8221;</a>).</p>
+  </div><!-- /grid-6 -->
+
+  <div class="grid-6">
+    <h3>How to Use this Website</h3>
+    <p>First of all, make a copy of the unzipped repository, and store it in a safe place. Always work off a copy. Don&#8217;t mess with the original. Crap happens to the best of us, so it&#8217;s always nice to have a clean copy ready.</p>
+
+    <p>What code the cheat sheet contains may be selected (and by such, will in some browsers be copied to the clipboard &#8212; if not, press the keys <span class="keyboard"><abbr>CTRL</abbr></span> and <span class="keyboard">C</span> (<span class="keyboard">&#8984;</span> and <span class="keyboard">C</span>) &#8212; by using the respective button placed on top of individual blocks of code.</p>
+
+    <p>This should save you from having to run your pointing device across the screen (or hack away until your arrow keys melt, if you are using the keyboard), and make things a tad easier for users of mobile devices. To paste the clipboard&#8217;s content into a document, press <span class="keyboard"><abbr>CTRL</abbr></span> and <span class="keyboard">V</span> (<span class="keyboard">&#8984;</span> and <span class="keyboard">V</span>).</p>
+    <p id="grid">To create your own grid, use the following <abbr>CSS</abbr> classes:</p>
+    <dl>
+      <dt><code>.row</code></dt>
+       <dd>positions the grid elements it contains side&#8211;by&#8211;side (as screen estate allows)</dd>
+     <dt><code>.grid-4</code>, <code>.grid-6</code>, and <code>.grid-12</code></dt>
+       <dd>determines the width of displayed columns; take 12 and divide it by the grid number to get the number of columns in any one row</dd>
+     <dt><code>.grid-2</code> and <code>.grid-5</code></dt>
+      <dd>these two rules may be convenient, if you need to go beyond a simple grid to create your design</dd>
+    </dl>
+  </div><!--/grid-6 -->
+</div><!-- /row -->
+</section><!-- /intro -->
+
+<section id="structure">
+<div class="row">
+  <div class="section-header structure">
+    <div class="headline">
+   <h2>Structure</h2>
+   <p>Little boxes made of ticky–tacky</p>
+    </div><!-- /headline -->
+  </div><!-- /section-header -->
+</div><!-- /row -->
+
+  <div class="row section-body">
+    <div class="grid-6">
+    <h3><abbr>HTML</abbr> Structure</h3>
+    <p>This repository contains no <code>index.html</code>, so you may use the unzipped repository as a project root (and launch the <code>cheatsheet.html</code> in a browser tab next to your project files). This should help keep confusion at a minimum.</p>
+
+    <p>If you haven&#8217;t done so yet, create an empty document and save it as <code>index.html</code> in your project directory (folder), commonly referred to as &#8220;root&#8221;. Copy the <abbr>HTML</abbr> structure below and paste it into the newly created document. Launch this document in a browser, the title given in the source code should be visible in the top bar of your browser tab.</p>
+  </div><!-- /grid-6 -->
+  <div class="grid-6">
+    <h3><abbr>CSS</abbr> Structure</h3>
+    <p>The <abbr>CSS</abbr> directory of this repository already contains two empty files, called <code>30max.css</code> and <code>30min.css</code> respectively.</p>
+
+    <p>Copy the <abbr>CSS</abbr> commands below into the individual files. Unless you decided to change any references in your <abbr>HTML</abbr> source code, you are set to begin customising.</p>
+
+    <p>Remember that media queries act like filters: Commands inside a particular media query apply to devices meeting the specification set in the query only, while commands outside a media query are passed on to devices responding to subsequent specifications, too. No worries, it&#8217;s easier than it sounds.</p>
+  </div><!-- /grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+  <div class="grid-12">
+    <p><button id="select-html-source" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-html-source">Copy <abbr>HTML</abbr> Source</button></p>
+
+     <script>
+     var clipboard = new Clipboard('#select-html-source');
+
+     clipboard.on('success', function(e) {
+         console.log(e);
+     });
+
+     clipboard.on('error', function(e) {
+         console.log(e);
+     });
+     </script>
+
+<div id="copy-html-source" class="source-code">
+  <code>
+  &lt;!DOCTYPE html&gt;<br />
+  <span class="comment">&lt;!-- next line: set correct language you happen to use for your content; ex: &#34;de&#34; for German, &#34;fr&#34; for French, &#34;it&#34; for Italian <abbr>etc.</abbr> --&gt;</span><br />
+  &lt;html lang=&#34;en&#34;&gt;<br />
+  &lt;head&gt;<br />
+
+  <span class="comment">&lt;!-- next line: typical character set, but you should use whichever is useful for your project --&gt;</span><br />
+  &lt;meta charset=&#34;utf-8&#34; /&gt;<br />
+  <span class="comment">&lt;!-- next line: title of website: appears in the top bar of browser tab; --&gt;</span><br />
+  &lt;title&gt;Your Website&#8217;s Name &#8212; Your Cool Slogan (optional)&lt;/title&gt;<br />
+
+  <span class="comment">&lt;!-- next line: best&#8211;practice setting of device width; it&#8217;s not considered smart to limit these settings too much --&gt;</span><br />
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;<br />
+
+  <span class="comment">&lt;!-- next line: find typefaces that meet your criteria and change the reference accordingly; if you need more than one typeface, reference each individually; replace entire line/s with your choice/s to avoid typos --&gt;</span><br />
+  &lt;link href=&#34;http://fonts.googleapis.com/css?family=NameOfYourFont:400&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&gt;<br />
+
+  <span class="comment">&lt;!-- next two lines: always start with a &#8220;reset&#8221; &#8212; replace demos as you see fit; &#8220;demo30max&#8221; contains Eric Meyer’s reset, general styles and structural settings for small screens; &#8220;demo30min&#8221; contains structural and custom settings for large and medium&#8211;sized screens (Yes, in this order) --&gt;</span><br />
+
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;css/demo30max.css&#34; media=&#34;all&#34; /&gt;<br />
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;css/demo30min.css&#34; media=&#34;all and (min-width: 33.236em)&#34; /&gt;<br />
+
+  <span class="comment">&lt;!-- next three lines: the conditional comment tells some exotic browsers to employ &#8220;ltIE9&#8221; --&gt;</span><br />
+
+  <span class="comment">&lt;!--[if (lt IE 9) &amp; (!IEMobile)]&gt;<br />
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;css/ltIE9.css&#34; media=&#34;all&#34;&gt;<br />
+  &lt;![endif]--&gt;</span><br /><br />
+
+  <span class="comment">&lt;!-- next two lines: create the favicons that suit you and copy them in the root of your site --&gt;</span><br />
+  &lt;link rel=&#34;shortcut icon&#34; type=&#34;image/x-icon&#34; href=&#34;favicon.ico&#34; /&gt;<br />
+  &lt;link rel=&#34;apple-touch-icon&#34; type=&#34;image/ico&#34; href=&#34;apple-touch-icon.png&#34; /&gt;<br />
+
+  <span class="comment">&lt;!-- next three lines: conditional comment referencing Google&#8217;s shim so older browsers will understand your HTML5 tags; keep this one or replace it with one you consider more useful for your project --&gt;</span><br />
+  <span class="comment">&lt;!--[if lt IE 9]&gt;<br />
+  &lt;script src=&#34;http://html5shim.googlecode.com/svn/trunk/html5.js&#34;&gt;&lt;/script&gt;<br />
+  &lt;![endif]--&gt;</span><br /><br />
+
+  <span class="comment">&lt;!-- Place scripts that depend on loading order here. --&gt;</span><br />
+
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+
+  &lt;div class=&#34;container&#34;&gt;<br />
+  &lt;header class=&#34;banner&#34;&gt;<br />
+
+  <span class="comment">&lt;!-- next line: here goes Your Website&#8217;s name --&gt;</span><br />
+  &lt;h1 class=&#34;logo&#34;&gt;Your Website&#8217;s Name or Logo&lt;/h1&gt;<br />
+
+  <span class="comment">&lt;!-- next line: here goes Your Cool Slogan (optional) --&gt;</span><br />
+  &lt;p&gt;Your Cool Slogan (optional)&lt;/p&gt;<br />
+
+  &lt;nav&gt;<br />
+  <span class="tab1">&lt;ul&gt;</span><br />
+  <span class="tab2">&lt;li&gt;&lt;a href=&#34;#link1&#34;&gt;Link 1&lt;/a&gt;&lt;/li&gt;</span><br />
+  <span class="tab2">&lt;li&gt;&lt;a href=&#34;#link2&#34;&gt;Link 2&lt;/a&gt;&lt;/li&gt;</span><br />
+  <span class="tab2">&lt;li&gt;&lt;a href=&#34;#link3&#34;&gt;Link 3&lt;/a&gt;&lt;/li&gt;</span><br />
+  <span class="tab2">&lt;li&gt;&lt;a href=&#34;#link4&#34;&gt;Link 4&lt;/a&gt;&lt;/li&gt;</span><br />
+  <span class="tab2">&lt;li&gt;&lt;a href=&#34;#link5&#34;&gt;Link 5&lt;/a&gt;&lt;/li&gt;</span><br />
+  <span class="tab1">&lt;/ul&gt;</span><br />
+  &lt;/nav&gt;<br />
+
+  &lt;/header&gt;<span class="comment">&lt;!-- /header --&gt;</span><br />
+
+  &lt;div id=&#34;main&#34; role=&#34;main&#34; class=&#34;content&#34;&gt;<br />
+  <span class="comment">&lt;!-- here goes the actual content of your website --&gt;</span><br />
+
+  &lt;/div&gt;<span class="comment">&lt;!-- /main --&gt;</span><br />
+
+  &lt;footer class=&#34;footer&#34;&gt;<br />
+  <span class="comment">&lt;!-- here go copyright information and/or whatever information you consider useful. --&gt;</span><br />
+
+  &lt;/footer&gt;<span class="comment">&lt;!-- /footer --&gt;</span><br />
+  &lt;/div&gt;<span class="comment">&lt;!-- /container --&gt;</span><br />
+
+  <span class="comment">&lt;!-- To avoid slow page loading, put Javascripts that don&#8217;t depend on loading order here. --&gt;</span><br />
+
+  &lt;/body&gt;<br />
+  &lt;/html&gt;
+  </code>
+</div><!-- /copy-html-source -->
+
+
+<button id="select-css-30max" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-css-30max">Copy <abbr>CSS</abbr> Grid (30max)</button><br />
+
+ <script>
+ var clipboard = new Clipboard('#select-css-30max');
+
+ clipboard.on('success', function(e) {
+     console.log(e);
+ });
+
+ clipboard.on('error', function(e) {
+     console.log(e);
+ });
+ </script>
+
+<div id="copy-css-30max" class="source-code">
+<code>
+<span class="comment">/* TYPOGRAPHY </span><br />
+<span class="comment">general typographical rules */</span><br />
+
+<span class="comment">/* MEDIA </span><br />
+<span class="comment">custom rules concerning images, videos, etc. */</span><br />
+img, video { max-width: 100%; height: auto; }<br />
+
+<span class="comment">/* SECTIONS </span><br />
+<span class="comment">custom rules concerning individual sections: background, background-color, etc. */</span><br />
+
+<span class="comment">/* GRID: narrow screens */</span><br />
+@media screen and (max-width: 30em) {<br />
+.row { clear: both; margin: 0 auto; padding: 0 .5em; max-width: 30em; overflow: auto; }<br />
+.grid-2, .grid-4, .grid-5, .grid-6, .grid-12 { margin: 1em auto; padding: 0; max-width: 100%; }<br />
+}<br />
+</code>
+</div><!-- /source-code-30max -->
+
+<button id="select-css-30min" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-css-30min">Copy <abbr>CSS</abbr> Grid (30min)</button><br />
+
+ <script>
+ var clipboard = new Clipboard('#select-css-30min');
+
+ clipboard.on('success', function(e) {
+     console.log(e);
+ });
+
+ clipboard.on('error', function(e) {
+     console.log(e);
+ });
+ </script>
+
+<div id="copy-css-30min" class="source-code">
+<code>
+<span class="comment">/* GRID: wide screens */</span><br />
+.row { clear: both; margin: 0 auto; padding: 0 auto; max-width: 64em; overflow: auto; }<br />
+.grid-2 { float: left; margin: 0 .5em; padding: 0 auto; width: 9.5em; }<br />
+.grid-4 { float: left; margin: 0 .5em; padding: 0 auto; width: 20em; }<br />
+.grid-5 { float: left; margin: 0 .5em; padding: 0 auto; width: 25em; }<br />
+.grid-6 { float: left; margin: 0 .8em; padding: 0 auto; width: 30em; }<br />
+.grid-12 { margin: 1em .5em; padding: 0 auto; width: 62em;}<br />
+
+<span class="comment">/* GRID: medium&#8211;sized screens */</span><br />
+@media screen and (min-width: 30em) and (max-width: 63.236em) {<br />
+.row { width: 30em; }<br />
+.grid-2, .grid-4, .grid-5, .grid-6, .grid-12 { float: left; margin: 1em auto; padding: 0; width: 100%; }<br />
+}<br />
+</code>
+</div><!-- /source-code-30min -->
+</div><!-- grid-12 -->
+  </div><!-- /row -->
+</section><!-- /structure -->
+
+<section id="typography">
+<div class="row">
+  <div class="section-header typography">
+    <div class="headline">
+  <h2>Typography</h2>
+  <p>A matter of style</p>
+    </div><!-- /headline -->
+  </div><!-- /section-header -->
+</div><!-- /row -->
+
+  <div class="row section-body">
+    <div class="grid-6">
+    <h3>Typographical <abbr>HTML</abbr>&#8211;Tags</h3>
+    <p>This section contains the most common typographical <abbr>HTML</abbr>&#8211;tags. I chose to display them &#8220;in place&#8221; rather than separating text from <code>code</code>. Screenreader users: I&#8217;m sorry for the inconvenience this may cause, but this is a cheat sheet rather than a regular website.</p>
+    <p>In general, <abbr>HTML</abbr>&#8211;tags come in pairs, wrapping content. Exceptions are few (16, for all I know). Those you will frequently come across are even fewer:</p>
+     <ul class="unordered">
+       <li>meta information (<code>&lt;meta &hellip; /&gt;</code>)</li>
+       <li>images (<code>&lt;img &hellip; /&gt;</code>)</li>
+       <li>form fields (<code>&lt;input &hellip; /&gt;</code>)</li>
+       <li>line breaks (<code>&lt;br /&gt;</code>)</li>
+       <li>and, if all fails, horizontal rulers (<code>&lt;hr /&gt;</code>)</li>
+     </ul>
+     <p>Tags not coming in pairs have to be self&#8211;closing (reference: <code>&lt;a&nbsp;title=&#34;See example of self&#8211;closing tag&#34; href=&#34;#media&#34;&gt;</code><a title="See example of self–closing tag" href="#images">code &#8220;Images&#8221;</a><code>&lt;a&gt;</code> below).</p>
+
+    <p>Natively, <abbr>HTML</abbr> knows six orders of headlines: <code>&lt;h1&gt;</code>&nbsp;&hellip;&nbsp;<code>&lt;/h1&gt;</code> to <code>&lt;h6&gt;</code> &hellip; <code>&lt;/h6&gt;</code></p>
+
+    <p>Most commonly, single&#8211;page websites use one <code>&lt;h1&gt;</code>Headline of the First Order<code>&lt;/h1&gt;</code> for its title. <code>&lt;h2&gt;</code>Headlines of the Second Order<code>&lt;/h2&gt;</code> make excellent headers for your sections. And <code>&lt;h3&gt;</code>Headlines of the Third Order<code>&lt;/h3&gt;</code> may be used to head smaller (less important) elements.</p>
+
+    <p>If you believe to need more than these in a single&#8211;page website, you may want to reconsider your site structure. Note that headlines are tools to structure your content rather than decorate it, so use them in correct hierarchical order (highest to lowest in linear order).</p>
+    <p><code>&lt;p&gt;</code>By default, paragraphs do have &#8220;leading&#8221; (<abbr>i.e.</abbr>, horizontal margins that separate them visually), but in <code>reset.css</code> all margins have been set to 0 (zero). So they will have to be set again in your custom <abbr>CSS</abbr>. Yes, this makes sense!<code>&lt;/p&gt;</code></p>
+
+    <p>You may <code>&lt;em&gt;</code><em>semantically emphasise</em><code>&lt;/em&gt;</code> words or phrases, <code>&lt;strong&gt;</code><strong>visually emphasise</strong><code>&lt;/strong&gt;</code> them, or <code>&lt;mark&gt;</code><mark>mark keywords</mark><code>&lt;/mark&gt;</code>. It is even possible to combine (but <em>not</em> mix) them, but know that you will make hardboiled typographers hang their heads and weep like babies, if you do. When nesting tags, the rule &#8220;first in, last out&#8221; applies. Consult the source code, you will instantly recongnise a pattern.</p>
+
+    <p>Abbreviations (like, <code>&lt;abbr title=&#34;HyperText Markup Language&#34;&gt;</code><abbr title="HyperText Markup Language">HTML</abbr><code>&lt;/abbr&gt;</code>) and acronyms (<abbr>e.g.</abbr>, <code>&lt;abbr title=&#34;Keep It Simple, Stupid&#34;&gt;</code><abbr title="Keep It Simple, Stupid">KISS</abbr><code>&lt;/abbr&gt;</code>) share the same tag. To explain proper (but exotic) words, you may use &#8220;spans&#8221; instead: <code>&lt;span title=&#34;a lover of rain; someone who finds joy and peace of mind during rainy days&#34;&gt;</code><span title="a lover of rain; someone who finds joy and peace of mind during rainy days">Pluviophile</span><code>&lt;/span&gt;</code>.</p>
+  </div><!-- /grid-6 -->
+    <div class="grid-6">
+    <h3>Typographical Notes</h3>
+    <p>If you are using <abbr>utf-8</abbr> character coding, typographical characters should be displayed just fine in most browsers. I have yet to hear of basic punctuation (exclamation marks, questions marks, commas, colons, semicolons, and periods <abbr>a.k.a.</abbr> full stops) causing any problems; other characters may be tricky, though.</p>
+
+    <p>You may want to develop the habit of using &#8220;<abbr>HTML</abbr> entities&#8221; or &#8220;Decimal code&#8221; instead of the respective key (or shortcut) on your keyboard. Basically, there is no reason or rule against mixing <abbr>HTML</abbr> entities and decimal code (but in the long run, you will find it more useful to stick with one of the systems). In general, decimal code is considered to be the most stable solution; at any rate it provides the widest range of special characters. For details, consult <code>&lt;a&nbsp;rel=&#34;external&#34; href=&#34;https://smartquotesforsmartpeople.com/&#34;&gt;</code><a rel="external" href="https://smartquotesforsmartpeople.com/">&#8220;Smart Quotes for Smart People&#8221;</a><code>&lt;a&gt;</code>.</p>
+
+    <p>All hyphens are dashes, but not all dashes are hyphens. Use an &#8220;n&ndash;dash&#8221; (<code>&amp;ndash;</code>) to divide compound <em>words or syllables</em>. Yet to set off parenthetical statements (<em>parts of sentences</em>), you should use the &#8220;m&ndash;dash&#8221; (<code>&amp;mdash;</code>). This sentence contains &#8212; in order of appearance &#8212; two &#8220;m&ndash;dashes&#8221; and two &#8220;n&ndash;dashes&#8221;.</p>
+    <p>Whether or not to set empty spaces before and after &#8220;m&ndash;dashes&#8221; is less a matter of style than one of cultural preference (where you come from, in other words).</p>
+    <p>To display the trademark (&trade;), the registered (&reg;), or the copyright sign (&copy;), use <code>&amp;trade;</code>, <code>&amp;reg;</code> and <code>&amp;copy;</code>, respectively.</p>
+    <p>The typographical character you will (probably) come across in source code most frequently is the ampersand (&amp;). That&#8217;s because it is the most versatile character: it may be displayed (to substitute the word &#8220;and&#8221;) and processed (not displayed, but used to display other special characters and, of course, itself).</p>
+    <p>To display it in a stable way, type <code>&amp;amp;</code> or <code>&amp;#38;</code> (note that both codes contain the character itself). Since it looks awkward to have a single character displayed before or after a line break, you may want to combine it with non&#8211;breaking spaces in name compounds (or omit white spaces).</p>
+    <p>Examples: <code>Black&amp;nbsp;&amp;amp;&amp;nbsp;White</code> will set off the ampersand, but still keep the compound from suffering a line break (Black&nbsp;&amp;&nbsp;White), while <code>Black&amp;amp;White</code> will keep the compound intact, without any white spaces (Black&amp;White).</p>
+    <p>Note: Using the ampersand as a substitute for the word &#8220;and&#8221; in running text is considered poor style. By the way, it&#8217;s <em>Ben&nbsp;&amp;&nbsp;Jerry&#8217;s</em>&reg; (ice cream), but <em>Tom&nbsp;and&nbsp;Jerry</em> (cartoon characters).</p>
+  </div><!-- /grid-6 -->
+</div><!-- /row -->
+</section><!-- /typography -->
+
+<div class="person">
+<div class="row section-body">
+<div class="grid-6">
+
+<figure>
+<blockquote>
+<p>Software is like sex: it&#8217;s better when it&#8217;s free.</p>
+</blockquote>
+<figcaption><p>Linus Torvalds (&#42; 28 December 1969), Finnish Businessman</p></figcaption>
+</figure>
+</div><!-- /grid-6 -->
+
+<div class="grid-6 person-code">
+<p><button id="select-quote" class="copy-quote" data-clipboard-action="copy" data-clipboard-target="#copy-quote">Copy Blockquote Code</button></p>
+  <script>
+   var clipboard = new Clipboard('#select-quote');
+
+   clipboard.on('success', function(e) {
+       console.log(e);
+   });
+
+   clipboard.on('error', function(e) {
+       console.log(e);
+   });
+  </script>
+<div id="copy-quote" class="source-code">
+  <code>
+<span class="comment">&lt;!-- quote: Torvalds, free software and sex --&gt;</span><br />
+&lt;figure&gt;<br />
+<span class="tab1">&lt;blockquote&gt;</span><br />
+<span class="tab2">&lt;p&gt;Software is like sex: it&amp;#8217;s better when it&amp;#8217;s free.&lt;/p&gt;</span><br />
+<span class="tab1">&lt;/blockquote&gt;</span><br />
+<span class="tab1">&lt;figcaption&gt;</span><br />
+<span class="tab2">&lt;p&gt;Linus Torvalds (&amp;#42; 28 December 1969), Finnish Businessman&lt;/p&gt;</span><br />
+<span class="tab1">&lt;/figcaption&gt;</span><br />
+&lt;/figure&gt;<br />
+<span class="comment">&lt;!-- /quote --&gt;</span>
+</code>
+</div><!-- /copy-quote -->
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+</div><!-- /person -->
+
+<section id="tables">
+  <div class="row">
+    <div class="section-header tables">
+      <div class="headline">
+    <h2>Tables</h2>
+    <p>Let’s bring some data to the table …</p>
+      </div><!-- /headline -->
+    </div><!-- /section-header -->
+  </div><!-- /row -->
+
+  <div class="row section-body">
+    <div class="grid-6">
+    <h3>Data Tables</h3>
+    <p>The only data tables I came across of late are price or feature tables. These are rather easy by concept. Here’s an example:</p>
+
+    <table>
+    <caption>Our Plans</caption>
+    <tr>
+    <th scope="col" class="features colhead">Features</th>
+    <th scope="col" class="colhead">Starter</th>
+    <th scope="col" class="standard colhead">Standard</th>
+    <th scope="col" class="colhead">Premium</th>
+    </tr>
+    <tr>
+    <th scope="row" class="features">Shit</th>
+    <td>Yes</td>
+    <td class="standard">Yes</td>
+    <td>Yes</td>
+    </tr>
+    <tr>
+    <th scope="row" class="features">Hot Shit</th>
+    <td>No</td>
+    <td class="standard">Yes</td>
+    <td>Yes</td></tr>
+    <tr>
+    <th scope="row" class="features">Extra Hot Shit</th>
+    <td>No</td>
+    <td class="standard">No</td>
+    <td>Yes</td>
+    </tr>
+    <tr>
+    <th scope="row" class="features price">Price (<abbr>&euro;</abbr>)</th>
+    <td class="price">Free</td>
+    <td class="standard price">4.99</td>
+    <td class="price">9.99</td>
+    </tr>
+    </table>
+
+    <p>The styling &#8212; you have probably guessed as much already &#8212; was accomplished via standard <abbr>HTML</abbr>&#8211;tags and classes in the <abbr>CSS</abbr> file (see <code>css/demo30max.css</code>).</p>
+  </div><!-- /grid-6 -->
+  <div class="grid-6">
+    <p><button id="select-table" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-table">Copy Data Table</button></p>
+
+     <script>
+     var clipboard = new Clipboard('#select-table');
+
+     clipboard.on('success', function(e) {
+         console.log(e);
+     });
+
+     clipboard.on('error', function(e) {
+         console.log(e);
+     });
+     </script>
+
+    <div id="copy-table" class="source-code">
+    <code>
+      &lt;table&gt;<br />
+      &lt;caption&gt;Our Plans&lt;/caption&gt;<br />
+      &lt;tr&gt;<br />
+    <span class="tab1">&lt;th scope=&#34;col&#34; class=&#34;features colhead&#34;&gt;Features&lt;/th&gt;</span><br />
+    <span class="tab1">&lt;th scope=&#34;col&#34; class=&#34;colhead&#34;&gt;Starter&lt;/th&gt;</span><br />
+    <span class="tab1">&lt;th scope=&#34;col&#34; class=&#34;standard colhead&#34;&gt;Standard&lt;/th&gt;</span><br />
+    <span class="tab1">&lt;th scope=&#34;col&#34; class=&#34;colhead&#34;&gt;Premium&lt;/th&gt;</span><br />
+      &lt;/tr&gt;<br />
+      &lt;tr&gt;<br />
+    <span class="tab1">&lt;th scope=&#34;row&#34; class=&#34;features&#34;&gt;Shit&lt;/th&gt;</span><br />
+    <span class="tab1">&lt;td&gt;Yes&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td class=&#34;standard&#34;&gt;Yes&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td&gt;Yes&lt;/td&gt;</span><br />
+      &lt;/tr&gt;<br />
+      &lt;tr&gt;<br />
+    <span class="tab1">&lt;th scope=&#34;row&#34; class=&#34;features&#34;&gt;Hot Shit&lt;/th&gt;</span><br />
+    <span class="tab1">&lt;td&gt;No&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td class=&#34;standard&#34;&gt;Yes&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td&gt;Yes&lt;/td&gt;</span><br />
+      &lt;/tr&gt;<br />
+      &lt;tr&gt;<br />
+    <span class="tab1">&lt;th scope=&#34;row&#34; class=&#34;features&#34;&gt;Extra Hot Shit&lt;/th&gt;</span><br />
+    <span class="tab1">&lt;td&gt;No&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td class=&#34;standard&#34;&gt;No&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td&gt;Yes&lt;/td&gt;</span><br />
+      &lt;/tr&gt;<br />
+      &lt;tr&gt;<br />
+    <span class="tab1">&lt;th scope=&#34;row&#34; class=&#34;features price&#34;&gt;Price (&lt;abbr&gt;&amp;euro;&lt;/abbr&gt;)&lt;/th&gt;</span><br />
+    <span class="tab1">&lt;td class=&#34;price&#34;&gt;Free&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td class=&#34;standard price&#34;&gt;4.99&lt;/td&gt;</span><br />
+    <span class="tab1">&lt;td class=&#34;price&#34;&gt;9.99&lt;/td&gt;</span><br />
+      &lt;/tr&gt;<br />
+      &lt;/table&gt;
+    </code>
+    </div><!-- /copy-table -->
+  </div><!-- /grid-6 -->
+</div><!-- /row -->
+</section><!-- /tables -->
+
+<section id="lists">
+<div class="row">
+  <div class="section-header lists">
+    <div class="headline">
+  <h2>Lists</h2>
+  <p>If there is more than one item, you may want to make a list</p>
+    </div><!-- /headline -->
+  </div><!-- /section-header -->
+</div><!-- /row -->
+
+  <div class="row section-body">
+    <div class="grid-6">
+    <h3>Unordered List</h3>
+    <p>The world is full of lists:</p>
+      <ul class="unordered">
+        <li>wish lists</li>
+        <li>shopping lists</li>
+        <li>to&#8211;do lists</li>
+      </ul>
+
+    <p>Whether they are always used to effect? When I watch people in the supermarket, I do have my doubts. The one above is an &#8220;unordered list&#8221;, the individual items are added in no particular order. I suspect that many a shopping or to&#8211;do list looks quite similar.</p>
+  </div><!-- /grid-6 -->
+  <div class="grid-6">
+          <p><button id="select-ul" data-clipboard-action="copy" data-clipboard-target="#copy-ul">Copy Unordered List</button></p>
+          <script>
+          var clipboard = new Clipboard('#select-ul');
+
+          clipboard.on('success', function(e) {
+              console.log(e);
+          });
+
+          clipboard.on('error', function(e) {
+              console.log(e);
+          });
+          </script>
+                 <!-- unordered list code -->
+                 <div id="copy-ul" class="source-code">
+                   <code>
+                     &lt;ul&gt;<br />
+                   <span class="tab1">&lt;li&gt;wish lists&lt;/li&gt;</span><br />
+                   <span class="tab1">&lt;li&gt;shopping lists&lt;/li&gt;</span><br />
+                   <span class="tab1">&lt;li&gt;to&amp;#8211;do lists&lt;/li&gt;</span><br />
+                     &lt;/ul&gt;
+                   </code>
+                 </div><!-- /unordered list code -->
+
+
+  </div><!-- /grid-6 -->
+</div><!-- /row -->
+<div class="row section-body">
+  <div class="grid-6">
+    <h3>Ordered List</h3>
+<p>Yet a useful to&#8211;do list prioritises the tasks to be accomplished (either by urgency or what system is most effective, efficient, or convenient). Here&#8217;s an &#8220;ordered list&#8221; that already reads like a plan:</p>
+
+<ol class="ordered">
+<li>shopping</li>
+<li>cooking</li>
+<li>cleaning</li>
+</ol>
+</div><!-- /grid-6 -->
+<div class="grid-6">
+<p><button id="select-ol" data-clipboard-action="copy" data-clipboard-target="#copy-ol">Copy Ordered List</button></p>
+<script>
+var clipboard = new Clipboard('#select-ol');
+
+clipboard.on('success', function(e) {
+  console.log(e);
+});
+
+clipboard.on('error', function(e) {
+  console.log(e);
+});
+</script>
+     <!-- ordered list code -->
+     <div id="copy-ol" class="source-code">
+       <code>
+         &lt;ol&gt;<br />
+<span class="tab1">&lt;li&gt;shopping&lt;/li&gt;</span><br />
+<span class="tab1">&lt;li&gt;cooking&lt;/li&gt;</span><br />
+<span class="tab1">&lt;li&gt;cleaning&lt;/li&gt;</span><br />
+         &lt;/ol&gt;
+       </code>
+     </div><!-- /ordered list code -->
+  </div><!-- /grid-6 -->
+</div><!-- /row -->
+<div class="row section-body">
+  <div class="grid-6">
+    <h3>Nested Lists</h3>
+  <p>Provided that cleaning is conducted rather regularly, it will make a lot of sense to start with shopping (especially when the fridge is empty), then do the cooking, and eventually the cleaning. That was easy, but rather boring. Let&#8217;s do something that reads not only like a plan but like a strategy in the making:</p>
+
+  <ol class="nested-ordered">
+    <li>shopping
+        <ul>
+          <li>baker</li>
+          <li>butcher</li>
+          <li>greengrocer</li>
+        </ul>
+    </li>
+    <li>cooking
+      <ol>
+        <li>tart</li>
+        <li>salad</li>
+        <li>steaks</li>
+      </ol>
+    </li>
+    <li>cleaning
+    <ol>
+      <li>cutlery</li>
+      <li>plates</li>
+      <li>pans</li>
+      <li>floor</li>
+    </ol>
+      </li>
+  </ol>
+
+  <p>This list appears to be a bit elaborate, but we are looking at four lists, really. Nevertheless, the meaning couldn&#8217;t be any clearer. Shopping, first priority (order of shops irrelevant, as long as they are located close together). Then cooking (first the tart, because it takes the longest; then the salad; and finally the steaks, because they will be finished in no time). Eventually, we need to clean up the mess. Here, the particular order is important, because we want to save dishwater, and don&#8217;t want to splash greasy water on a clean floor. Accidents may happen, after all.</p>
+
+</div><!-- /grid-6 -->
+<div class="grid-6">
+  <p><button id="select-nol" data-clipboard-action="copy" data-clipboard-target="#copy-nol">Copy Nested Ordered List</button></p>
+  <script>
+  var clipboard = new Clipboard('#select-nol');
+
+  clipboard.on('success', function(e) {
+      console.log(e);
+  });
+
+  clipboard.on('error', function(e) {
+      console.log(e);
+  });
+  </script>
+
+         <!-- nested ordered list code -->
+         <div id="copy-nol" class="source-code">
+         <code>
+           &lt;ol&gt;<br />
+    <span class="tab1">&lt;li&gt;shopping</span><br />
+    <span class="tab2">&lt;ul&gt;</span><br />
+    <span class="tab3">&lt;li&gt;baker&lt;/li&gt;</span><br />
+    <span class="tab3">&lt;li&gt;butcher&lt;/li&gt;</span><br />
+    <span class="tab3">&lt;li&gt;greengrocer&lt;/li&gt;</span><br />
+    <span class="tab2">&lt;/ul&gt;</span><br />
+    <span class="tab1">&lt;/li&gt;</span><br />
+    <span class="tab1">&lt;li&gt;cooking</span><br />
+    <span class="tab2">&lt;ol&gt;</span><br />
+    <span class="tab3">&lt;li&gt;tart&lt;/li&gt;</span><br />
+    <span class="tab3">&lt;li&gt;salad&lt;/li&gt;</span><br />
+    <span class="tab3">&lt;li&gt;steaks&lt;/li&gt;</span><br />
+    <span class="tab2">&lt;/ol&gt;</span><br />
+    <span class="tab1">&lt;/li&gt;</span><br />
+    <span class="tab1">&lt;li&gt;cleaning</span><br />
+    <span class="tab2">&lt;ol&gt;</span><br />
+    <span class="tab3">&lt;li&gt;cutlery&lt;/li&gt;</span><br />
+    <span class="tab3">&lt;li&gt;plates&lt;/li&gt;</span><br />
+    <span class="tab3">&lt;li&gt;pans&lt;/li&gt;</span><br />
+    <span class="tab3">&lt;li&gt;floor&lt;/li&gt;</span><br />
+    <span class="tab2">&lt;/ol&gt;</span><br />
+    <span class="tab1">&lt;/li&gt;</span><br />
+           &lt;/ol&gt;
+         </code>
+       </div><!-- /nested ordered list code -->
+
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+<div class="grid-6">
+  <h3>Definition List</h3>
+  <p>Now, let&#8217;s get to the queen of lists: the definition list. You cannot display any more information, in a much simpler (and semantically correct) way.</p>
+
+  <dl>
+      <dt id="donald">Donald Duck</dt>
+        <dd>Protagonist</dd>
+        <dd>Anti&#8211;Hero</dd>
+      <dt id="hdl">Huey, Dewey and Louie</dt>
+        <dd><a href="#donald">Donald&#8217;s</a> nephews</dd>
+        <dd>Grandnephews to <a href="#scrooge">Scrooge McDuck</a></dd>
+        <dd>Junior Woodchucks (boy scouts)</dd>
+      <dt id="scrooge">Scrooge McDuck (Uncle Scrooge)</dt>
+        <dd><a href="#donald">Donald&#8217;s</a> uncle&#8211;in&#8211;law</dd>
+        <dd>Granduncle to <a href="#hdl">Huey, Dewey and Louie</a></dd>
+        <dd>Filthy rich</dd>
+      <dt id="daisy">Daisy Duck</dt>
+          <dd><a href="#donald">Donald&#8217;s</a> sweetheart</dd>
+          <dd>Also courted by <a href="#gladstone">Gladstone Gander</a></dd>
+      <dt id="gladstone">Gladstone Gander</dt>
+        <dd><a href="#donald">Donald&#8217;s</a> cousin and antagonist</dd>
+        <dd>Infuriously lucky (except with <a href="#daisy">Daisy Duck</a>)</dd>
+  </dl>
+</div><!-- /grid-6 -->
+
+<div class="grid-6">
+  <p><button id="select-dl" data-clipboard-action="copy" data-clipboard-target="#copy-dl">Copy Definition List</button></p>
+       <script>
+       var clipboard = new Clipboard('#select-dl');
+
+       clipboard.on('success', function(e) {
+           console.log(e);
+       });
+
+       clipboard.on('error', function(e) {
+           console.log(e);
+       });
+       </script>
+
+       <!-- definition list code -->
+       <div id="copy-dl" class="source-code">
+         <code>
+         &lt;dl&gt;<br />
+<span class="tab1">&lt;dt id=&#34;donald&#34;&gt;Donald Duck&lt;/dt&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Protagonist&lt;/dd&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Anti&amp;#8211;Hero&lt;/dd&gt;</span><br />
+<span class="tab1">&lt;dt id=&#34;hdl&#34;&gt;Huey, Dewey and Louie&lt;/dt&gt;</span><br />
+<span class="tab2">&lt;dd&gt;&lt;a href=&#34;#donald&#34;&gt;Donald&amp;#8217;s&lt;/a&gt; nephews&lt;/dd&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Grandnephews to &lt;a href=&#34;#scrooge&#34;&gt;Scrooge McDuck&lt;/a&gt;&lt;/dd&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Junior Woodchucks (boy scouts)&lt;/dd&gt;</span><br />
+<span class="tab1">&lt;dt id=&#34;scrooge&#34;&gt;Scrooge McDuck (Uncle Scrooge)&lt;/dt&gt;</span><br />
+<span class="tab2">&lt;dd&gt;&lt;a href=&#34;#donald&#34;&gt;Donald&amp;#8217;s&lt;/a&gt; uncle&amp;#8211;in&amp;#8211;law&lt;/dd&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Granduncle to &lt;a href=&#34;#hdl&#34;&gt;Huey, Dewey and Louie&lt;/a&gt;&lt;/dd&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Filthy rich&lt;/dd&gt;</span><br />
+<span class="tab1">&lt;dt id=&#34;daisy&#34;&gt;Daisy Duck&lt;/dt&gt;</span><br />
+<span class="tab2">&lt;dd&gt;&lt;a href=&#34;#donald&#34;&gt;Donald&amp;#8217;s&lt;/a&gt; sweetheart&lt;/dd&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Also courted by &lt;a href=&#34;#gladstone&#34;&gt;Gladstone Gander&lt;/a&gt;&lt;/dd&gt;</span><br />
+<span class="tab1">&lt;dt id=&#34;gladstone&#34;&gt;Gladstone Gander&lt;/dt&gt;</span><br />
+<span class="tab2">&lt;dd&gt;&lt;a href=&#34;#donald&#34;&gt;Donald&amp;#8217;s&lt;/a&gt; cousin and antagonist&lt;/dd&gt;</span><br />
+<span class="tab2">&lt;dd&gt;Infuriously lucky (except with &lt;a href=&#34;#daisy&#34;&gt;Daisy Duck&lt;/a&gt;)&lt;/dd&gt;</span><br />
+  &lt;/dl&gt;
+      </code>
+    </div><!-- /definition list code -->
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+</section><!-- /lists -->
+
+<section id="media">
+<div class="row">
+  <div class="section-header media">
+    <div class="headline">
+  <h2>Media</h2>
+  <p>Images, videos, and audio files</p>
+    </div><!-- /headline -->
+  </div><!-- /section-header -->
+</div><!-- /row -->
+
+  <div class="row section-body">
+  <div class="grid-6">
+    <h3>The Groovy Lemon Pie</h3>
+<p>Images, videos, and audio files <em>can</em> greatly improve the functionality of your website. Yet there will be hardly an element as troublesome to your visitors (and also to you), when implemented without reason or care.</p>
+<p>Even purely visual elements (eye candies without a function other than being pretty) should come with options. You have no way of seriously anticipating who will visit your website, or how, so see to give your visitors alternatives. Don&#8217;t waste their bandwidth just because you can &hellip;</p>
+</div><!-- /grid-6 -->
+
+<div class="grid-6">
+  <p><button id="select-css-media" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-css-media">Copy <abbr>CSS</abbr> Media</button></p>
+
+   <script>
+   var clipboard = new Clipboard('#select-css-media');
+
+   clipboard.on('success', function(e) {
+       console.log(e);
+   });
+
+   clipboard.on('error', function(e) {
+       console.log(e);
+   });
+   </script>
+
+<div id="copy-css-media" class="source-code">
+  <code>
+    <span class="comment">/* MEDIA */</span><br />
+    <span class="comment">/* next line: images and native videos are responsive (to the given screen size) */</span><br />
+    img, video { max-width: 100%; height: auto; }<br />
+    <span class="comment">/* next two lines: videos are displayed 16:9 and iframes do not fall back to default; default size (width and height) of youtube&#8217;s embedding code was removed */</span><br />
+    .youtube { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }<br />
+    .youtube iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  </code>
+</div>
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+<div class="grid-6" id="images">
+  <h3>Figuring Images Out</h3>
+<figure class="images">
+<p><img src="images/dummy-image.jpg" alt="Dummy image with white background, red border and text, reads: Your image here" /></p>
+<figcaption>
+<p>Figure 1: Dummy Image</p>
+</figcaption>
+</figure>
+</div><!-- /grid-6 -->
+
+<div class="grid-6">
+   <p><button id="select-image" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-image">Copy Image Code</button></p>
+<script>
+     var clipboard = new Clipboard('#select-image');
+
+     clipboard.on('success', function(e) {
+         console.log(e);
+     });
+
+     clipboard.on('error', function(e) {
+         console.log(e);
+     });
+</script>
+
+<div id="copy-image" class="source-code">
+  <code>
+  <span class="comment">&lt;!-- leave alt-attribute empty ... alt=&#34;&#34; ... and don&#8217;t use figcaption, if your image is merely for decorative puroposes; note that image&#8211;tag is &#8220;self&#8211;closing&#8221; --&gt;</span><br />
+  &lt;figure&gt;<br />
+  <span class="tab1">&lt;p&gt;&lt;img src=&#34;images/dummy-image.jpg&#34; alt=&#34;Dummy image with white background, red border and text, reads: Your image here&#34; /&gt;&lt;/p&gt;</span><br />
+  &lt;figcaption&gt;<br />
+  <span class="tab1">&lt;p&gt;Figure 1: Dummy Image&lt;/p&gt;</span><br />
+  &lt;/figcaption&gt;<br />
+  &lt;/figure&gt;
+  </code>
+</div><!-- /copy-image -->
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+<div class="grid-6">
+  <h3>YouTube Videos</h3>
+  <figure>
+    <div class="youtube">
+<iframe src="https://www.youtube.com/embed/Y7aEiVwBAdk" allowfullscreen></iframe>
+    </div>
+<figcaption>
+<p><a rel="external" href="https://youtu.be/Y7aEiVwBAdk">Watch this video on Youtube</a></p>
+</figcaption>
+</figure>
+</div><!-- /grid-6 -->
+
+<div class="grid-6">
+   <p><button id="select-youtube" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-youtube">Copy YouTube Code</button></p>
+<script>
+     var clipboard = new Clipboard('#select-youtube');
+
+     clipboard.on('success', function(e) {
+         console.log(e);
+     });
+
+     clipboard.on('error', function(e) {
+         console.log(e);
+     });
+</script>
+
+<div id="copy-youtube" class="source-code">
+  <code>
+    <span class="comment">&lt;!-- the following implementation code was taken from the YouTube site; sizes (width and height) were removed and are now ruled by the class .youtube in the <abbr>css</abbr> file. --&gt;</span><br />
+    &lt;figure&gt;<br />
+    <span class="tab1">&lt;div class=&#34;youtube&#34;&gt;</span><br />
+    <span class="tab2">&lt;iframe src=&#34;https://www.youtube.com/embed/Y7aEiVwBAdk&#34;	 allowfullscreen&gt;&lt;/iframe&gt;</span><br />
+    <span class="tab1">&lt;/div&gt;</span><br />
+    &lt;figcaption&gt;<br />
+    <span class="tab1">&lt;p&gt;&lt;a rel=&#34;external&#34; href=&#34;https://youtu.be/Y7aEiVwBAdk&#34;&gt;Watch this video on Youtube&lt;/a&gt;&lt;/p&gt;</span><br />
+    &lt;/figcaption&gt;<br />
+    &lt;/figure&gt;
+  </code>
+</div><!-- /copy-video -->
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+<div class="grid-6">
+    <h3>Universal Video Player</h3>
+
+    <figure>
+<div class="px-video-container" id="indie">
+	<div class="px-video-img-captions-container">
+		<div class="px-video-captions hide"></div>
+		<div class="px-video-wrapper">
+
+			<video poster="media/spyware-2.0.jpg" class="px-video" controls>
+				<!-- video files -->
+				<source src="https://ind.ie/videos/spyware-2.0/spyware-2.0.webm" type="video/webm" />
+				<source src="https://vimeo.com/116656700" type="video/mp4" />
+				<source src="https://ind.ie/videos/spyware-2.0/spyware-2.0.ogv" type="video/ogg" />
+
+				<!-- text track file -->
+				<track kind="captions" label="English captions" src="media/captions-spyware-2.0-en.vtt" srclang="en" default />
+
+				<!-- fallback for browsers that don't support the video element -->
+				<div>
+					<a href="https://ind.ie/videos/spyware-2.0/spyware-2.0.mp4">
+						<img src="media/spyware-2.0.jpg" width="640" height="360" alt="download video" />
+					</a>
+				</div>
+			</video>
+    </div>
+	</div> <!-- end container for captions and video -->
+	<div class="px-video-controls"></div>
+</div><!-- end video container -->
+<figcaption><p>Download video: <a href="https://ind.ie/videos/spyware-2.0/spyware-2.0.ogv">Open format (<abbr>.ogg</abbr> file)</a> | <a href="https://vimeo.com/116656700">Closed format (<abbr>.mp4</abbr> file)</a></p></figcaption>
+</figure>
+</div><!-- /grid-6 -->
+
+<div class="grid-6">
+  <h3>Implementing the Universal Video Player</h3>
+  <p>To implement this responsive and accessible <abbr>HTML5</abbr> Video Player, follow the <a href="#resources">link in &#8220;Resources&#8221;</a> to the ind.ie project for code and tutorial. The example above shows how it works, once embedded.</p>
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+  <div class="grid-6">
+<h3>Native Video</h3>
+
+<figure>
+<video poster="media/spyware-2.0.jpg" controls>
+
+<!-- video files -->
+
+<source src="https://ind.ie/videos/spyware-2.0/spyware-2.0.webm" type="video/webm" />
+<source src="https://vimeo.com/116656700" type="video/mp4" />
+<source src="https://ind.ie/videos/spyware-2.0/spyware-2.0.ogv" type="video/ogg" />
+
+<!-- text track file -->
+
+<track kind="captions" label="English captions" src="media/captions-spyware-2.0-en.vtt" srclang="en" default />
+</video>
+
+<!-- fallback for browsers that don't support the video element -->
+
+<figcaption>
+<p>Download video: <a href="https://ind.ie/videos/spyware-2.0/spyware-2.0.ogv">Open format (<abbr>.ogg</abbr> file)</a> | <a href="https://vimeo.com/116656700">Closed format (<abbr>.mp4</abbr> file)</a></p>
+</figcaption>
+</figure>
+</div><!-- /grid-6 -->
+
+<div class="grid-6">
+<p><button id="select-native-video" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-native-video">Copy Native Video Code</button></p>
+<script>
+  var clipboard = new Clipboard('#select-native-video');
+
+  clipboard.on('success', function(e) {
+      console.log(e);
+  });
+
+  clipboard.on('error', function(e) {
+      console.log(e);
+  });
+</script>
+<div id="copy-native-video" class="source-code">
+  <code>
+  &lt;figure&gt;<br />
+  <span class="tab1">&lt;video poster=&#34;media/spyware-2.0.jpg&#34; controls&gt;</span><br />
+  <span class="comment">&lt;!-- video files --&gt;</span><br />
+  <span class="tab2">&lt;source src=&#34;https://ind.ie/videos/spyware-2.0/spyware-2.0.webm&#34; type=&#34;video/webm&#34; /&gt;</span><br />
+  <span class="tab2">&lt;source src=&#34;https://vimeo.com/116656700&#34; type=&#34;video/mp4&#34; /&gt;</span><br />
+  <span class="tab2">&lt;source src=&#34;https://ind.ie/videos/spyware-2.0/spyware-2.0.ogv&#34; type=&#34;video/ogg&#34; /&gt;</span><br />
+
+  <span class="comment">&lt;!-- text track file --&gt;</span><br />
+  <span class="tab2">&lt;track kind=&#34;captions&#34; label=&#34;English captions&#34; src=&#34;media/captions-spyware-2.0-en.vtt&#34; srclang=&#34;en&#34; default /&gt;</span><br />
+
+  <span class="tab1">&lt;/video&gt;</span><br />
+  <span class="comment">&lt;!-- fallback for browsers that don't support the video element --&gt;</span><br />
+  &lt;figcaption&gt;<br />
+  <span class="tab1">&lt;p&gt;Download video: &lt;a href=&#34;https://ind.ie/videos/spyware-2.0/spyware-2.0.ogv&#34;&gt;Open format (&lt;abbr&gt;.ogg&lt;/abbr&gt; file)&lt;/a&gt; | &lt;a href=&#34;https://vimeo.com/116656700&#34;&gt;Closed format (&lt;abbr&gt;.mp4&lt;/abbr&gt; file)&lt;/a&gt;&lt;/p&gt;</span><br />
+  &lt;/figcaption&gt;<br />
+  &lt;/figure&gt;
+  </code>
+</div><!-- /copy-native-video -->
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+<div class="grid-6">
+  <h3>Native Audio</h3>
+<figure>
+<audio id="audio1" preload="auto" controls>
+  <source src="media/light-of-thy-grace.mp3" type="audio/mpeg">
+  <source src="media/light-of-thy-grace.ogg" type="audio/ogg">
+</audio>
+<figcaption>Download: <a href="media/light-of-thy-grace.ogg">Open format (<abbr>.ogg</abbr> file)</a> | <a href="media/light-of-thy-grace.mp3">Closed format (<abbr>.mp3</abbr> file)</a></figcaption>
+</figure>
+
+<h4>Transcript: The Light of Thy Grace</h4>
+<figure>
+<blockquote class="sonnet">
+<p>In the light of thy grace I spent my life<br />
+Thou hast sheltered me since the dawn of time<br />
+To honour thy greatness, I shall e'er strife<br />
+Praise thy glory with gay song and sweet rhyme<br />
+The loss of your colours drains my poor heart<br />
+Distance hides your tender face from my eye<br />
+Too many miles, we are too far apart<br />
+Too many ages already gone by</p>
+<p>Yet I must not mourn, alas, I should cheer<br />
+Praise thy glory with gay rhyme and sweet song<br />
+For thus I swore as I left you, my dear<br />
+My reward shall be to hold you ere long<br />
+To lie by your side, at ease and caress'd,<br />
+Clad in your colours and happy at last</p>
+</blockquote>
+</figure>
+</div><!-- /grid-6 -->
+
+<div class="grid-6">
+  <p><button id="select-native-audio" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-native-audio">Copy Native Audio Code</button></p>
+  <script>
+    var clipboard = new Clipboard('#select-native-audio');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+  </script>
+  <div id="copy-native-audio" class="source-code">
+<code>
+&lt;figure&gt;<br />
+<span class="tab1">&lt;audio id=&#34;audio1&#34; preload=&#34;auto&#34; controls&gt;</span><br />
+<span class="tab2">&lt;source src=&#34;path/to/audio-file.mp3&#34; type=&#34;audio/mpeg&#34;&gt;</span><br />
+<span class="tab2">&lt;source src=&#34;path/to/audio-file.ogg&#34; type=&#34;audio/ogg&#34;&gt;</span><br />
+<span class="tab1">&lt;/audio&gt;</span><br />
+&lt;figcaption&gt;<br />
+<span class="tab1">&lt;p&gt;Download: &lt;a href=&#34;path/to/audio-file.ogg&#34;&gt;Open format (&lt;abbr&gt;.ogg&lt;/abbr&gt; file)&lt;/a&gt; | &lt;a href=&#34;path/to/audio-file.mp3&#34;&gt;Closed format (&lt;abbr&gt;.mp3&lt;/abbr&gt; file)&lt;/a&gt;&lt;/p&gt;</span><br />
+&lt;/figcaption&gt;<br />
+&lt;/figure&gt;
+</code>
+</div><!-- /copy-native-audio -->
+</div><!-- /grid-6 -->
+</div><!-- /row -->
+</section><!-- /media -->
+
+<section id="services">
+<div class="row">
+  <div class="section-header services">
+    <div class="headline">
+    <h2>Outsourcing Services</h2>
+    <p>Stay in touch with your visitors</p>
+    </div><!-- /headline -->
+  </div><!-- /section-header -->
+</div><!-- /row -->
+
+<div class="row section-body">
+  <div class="grid-6">
+    <h3>Contact Form</h3>
+    <p>Using a contact form on a static server is quite easy with <a rel="external" href="http://formspree.io/">Formspree</a>. There may be more services of that kind out there,
+      but <em>Formspree</em> was the first I found, and I&#8217;m quite happy with it.</p>
+<p>Copy the form they provide into your source code and replace the string after their web address
+      in the &#8220;action&#8221; attribute (the &#8220;your@email.com&#8221; part, that is) with your e-mail address. That&#8217;s it.</p>
+      <form class="contactform" action="http://formspree.io/macostairpress@gmail.com" method="POST">
+
+      <p><label for="name">Name:<br /><input type="text" id="name" name="name" placeholder="Name (required)" required /></label></p>
+
+      <p><label for="email">E-Mail:<br /><input type="email" id="email" name="_replyto" placeholder="E-Mail (required)" required /></label></p>
+
+      <p><label for="message">Message:<br /><textarea id="message" name="message" rows="4" placeholder="Message (required)" required></textarea></label></p>
+
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <button id="submit" type="submit" class="button">Send</button>
+
+      </form>
+  </div><!-- /grid-6 -->
+
+  <div class="grid-6">
+    <p><button id="select-contact" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-contact">Copy Contact Form</button></p>
+  <script>
+     var clipboard = new Clipboard('#select-contact');
+
+     clipboard.on('success', function(e) {
+         console.log(e);
+     });
+
+     clipboard.on('error', function(e) {
+         console.log(e);
+     });
+  </script>
+
+  <div id="copy-contact" class="source-code">
+  <code>
+  &lt;form class=&#34;contactform&#34; action=&#34;http://formspree.io/<strong>your@email.com</strong>&#34; method=&#34;POST&#34;&gt;<br />
+  &lt;p&gt;&lt;label for=&#34;name&#34;&gt;Name &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; placeholder=&#34;Name (required)&#34; required /&gt;&lt;/label&gt;&lt;/p&gt;<br />
+  &lt;p&gt;&lt;label for=&#34;email&#34;&gt;E-Mail &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;_replyto&#34; placeholder=&#34;E-Mail (required)&#34; required /&gt;&lt;/label&gt;&lt;/p&gt;<br />
+  &lt;p&gt;&lt;label for=&#34;message&#34;&gt;Message &lt;textarea id=&#34;message&#34; name=&#34;message&#34; rows=&#34;4&#34; placeholder=&#34;Message (required)&#34; required&gt;&lt;/textarea&gt;&lt;/label&gt;&lt;/p&gt;<br />
+  &lt;input type=&#34;text&#34; name=&#34;_gotcha&#34; style=&#34;display:none&#34; /&gt;<br />
+  &lt;button id=&#34;submit&#34; type=&#34;submit&#34; class=&#34;button&#34;&gt;Send&lt;/button&gt;<br />
+  &lt;/form&gt;
+  </code>
+  </div><!-- /copy-contact -->
+  </div><!--/grid-6 -->
+</div><!-- /row -->
+
+<div class="row section-body">
+  <div class="grid-6">
+    <h3>Newsletter</h3>
+    <p>If you want or need a newsletter service, you may want to try <a rel="external" href="http://mailchimp.com/">MailChimp</a>. <em>MailChimp</em> is free up to 2,000 subscribers and 12,000 emails per month.</p>
+    <p>Again, there may be other (perhaps even better) services out there, but <em>MailChimp</em> has become a quasi&#8211;standard.</p>
+
+    <!-- Begin MailChimp Signup Form -->
+
+   <form class="newsform" action="//macostair.us12.list-manage.com/subscribe/post?u=3ee786762bfe954974e95d109&amp;id=d718412dba" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+
+   <p><label for="mce-EMAIL">E-Mail <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="E-Mail (required)" required /></label></p>
+
+   <p><label for="mce-FNAME">First Name <input type="text" value="" name="FNAME" class="required text" id="mce-FNAME" placeholder="First Name (required)" required /></label></p>
+
+   <fieldset>
+
+   <legend>Preferred E-Mail Format:</legend>
+
+   <ul class="radio">
+   <li><label for="mce-EMAILTYPE-0"><abbr>HTML</abbr> <input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0" /></label></li>
+   <li><label for="mce-EMAILTYPE-1">Plain Text <input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1" /></label></li>
+   </ul>
+
+   </fieldset>
+
+   <div class="response" id="mce-error-response" style="display:none"></div>
+
+   <div class="response" id="mce-success-response" style="display:none"></div>
+   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="value will be provided by MailChimp" tabindex="-1" value=""></div>
+
+   <p class="newsbutton"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></p>
+
+   </form>
+
+   <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+
+   <script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';
+   fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+   <!--End mc_embed_signup-->
+
+  </div><!-- /grid-6 -->
+  <div class="grid-6">
+    <p><button id="select-news" class="copy-button" data-clipboard-action="copy" data-clipboard-target="#copy-news">Copy Newsletter Form</button></p>
+<script>
+     var clipboard = new Clipboard('#select-news');
+
+     clipboard.on('success', function(e) {
+         console.log(e);
+     });
+
+     clipboard.on('error', function(e) {
+         console.log(e);
+     });
+</script>
+
+<div id="copy-news" class="source-code">
+  <code>
+<span class="comment">&lt;!-- Begin MailChimp Signup Form --&gt;</span><br />
+&lt;form class=&#34;newsform&#34; action=&#34;<strong>value will be provided by MailChimp</strong>&#34; method=&#34;post&#34; id=&#34;mc-embedded-subscribe-form&#34; name=&#34;mc-embedded-subscribe-form&#34; target=&#34;_blank&#34; novalidate&gt;<br />
+
+&lt;p&gt;&lt;label for=&#34;mce-EMAIL&#34;&gt;E-Mail &lt;input type=&#34;email&#34; value=&#34;&#34; name=&#34;EMAIL&#34; class=&#34;required email&#34; id=&#34;mce-EMAIL&#34; placeholder=&#34;E-Mail (required)&#34; required /&gt;&lt;/label&gt;&lt;/p&gt;<br />
+&lt;p&gt;&lt;label for=&#34;mce-FNAME&#34;&gt;First Name &lt;input type=&#34;text&#34; value=&#34;&#34; name=&#34;FNAME&#34; class=&#34;required text&#34; id=&#34;mce-FNAME&#34; placeholder=&#34;First Name (required)&#34; required /&gt;&lt;/label&gt;&lt;/p&gt;<br />
+
+&lt;fieldset&gt;<br />
+&lt;legend&gt;Preferred E-Mail Format:&lt;/legend&gt;<br />
+&lt;ul class=&#34;radio&#34;&gt;<br />
+&lt;li&gt;&lt;label for=&#34;mce-EMAILTYPE-0&#34;&gt;&lt;abbr&gt;HTML&lt;/abbr&gt; &lt;input type=&#34;radio&#34; value=&#34;html&#34; name=&#34;EMAILTYPE&#34; id=&#34;mce-EMAILTYPE-0&#34; /&gt;&lt;/label&gt;&lt;/li&gt;<br />
+&lt;li&gt;&lt;label for=&#34;mce-EMAILTYPE-1&#34;&gt;Plain Text &lt;input type=&#34;radio&#34; value=&#34;text&#34; name=&#34;EMAILTYPE&#34; id=&#34;mce-EMAILTYPE-1&#34; /&gt;&lt;/label&gt;&lt;/li&gt;<br />
+&lt;/ul&gt;<br />
+&lt;/fieldset&gt;<br />
+&lt;div class=&#34;response&#34; id=&#34;mce-error-response&#34; style=&#34;display:none&#34;&gt;&lt;/div&gt;<br />
+&lt;div class=&#34;response&#34; id=&#34;mce-success-response&#34; style=&#34;display:none&#34;&gt;&lt;/div&gt;<br />
+<span class="comment">&lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;</span><br />
+&lt;div style=&#34;position: absolute; left: -5000px;&#34; aria-hidden=&#34;true&#34;&gt;&lt;input type=&#34;text&#34; name=&#34;<strong>value will be provided by MailChimp</strong>&#34; tabindex=&#34;-1&#34; value=&#34;&#34;&gt;&lt;/div&gt;<br />
+&lt;p class=&#34;newsbutton&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Subscribe&#34; name=&#34;subscribe&#34; id=&#34;mc-embedded-subscribe&#34; class=&#34;button&#34; /&gt;&lt;/p&gt;<br />
+&lt;/form&gt;<br />
+<span class="script">&lt;script src='//s3.amazonaws.com/downloads.mailchimp.com/<br />js/mc-validate.js'&gt;&lt;/script&gt;</span><br />
+<span class="script">&lt;script&gt;(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';<br />fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);&lt;/script&gt;</span>><br />
+<span class="comment">&lt;!--End mc_embed_signup--&gt;</span>
+</code>
+</div><!-- /copy-news -->
+  </div><!-- /grid-6 -->
+</div><!-- /row -->
+</section><!-- /services -->
+</div><!-- /main -->
+
+<footer class="siteinfo">
+<section id="resources">
+  <div class="row">
+    <div class="section-header resources">
+      <div class="headline">
+    <h2>Resources</h2>
+    <p>Useful Links, Tools, Copyright &amp; Design Information</p>
+      </div><!-- headline -->
+    </div><!-- /section-header -->
+  </div><!-- /row -->
+
+    <div class="row section-body siteinfo">
+    <div class="grid-6">
+      <h3>Useful Links</h3>
+      <ul class="sources">
+    <li><a rel="external" href="http://webaim.org/">WebAIM</a> (Web Accessibility in Mind)</li>
+    <li><a rel="external" href="http://validator.w3.org/"><abbr>W3C</abbr> Validator</a> (free online Markup Validation Service)</li>
+    <li><a rel="external" href="https://r12a.github.io/app-conversion/">Unicode Code Converter</a> (convert characters to a variety of codes)</li>
+    <li><a rel="external" href="https://www.google.com/fonts/">Google Fonts</a> (because it&#8217;s faster than loading them from your own server)</li>
+    <li><a rel="external" href="http://tools.pingdom.com/fpt/">Pingdom</a> (test the loading time of your site, analyse it and find bottlenecks)</li>
+    <li><a rel="external" href="https://source.ind.ie/project/video-player">ind.ie Projects: Universal Video Player</a> (Responsive Accessible HTML5 Video Player)</li>
+    <li><a rel="external" href="http://video.online-convert.com/">Online video file conversion (<abbr>mp4</abbr>, <abbr>webm</abbr>, <abbr>ogg</abbr>, <abbr>etc</abbr>)</a></li>
+      </ul>
+    </div><!-- /grid-6 -->
+
+    <div class="grid-6">
+      <h3>Tools</h3>
+    <p>You don&#8217;t need a wealth of tools or a sophisticated environment. Any old plain text editor (<abbr title="American Standard Code for Information Interchange">ASCII</abbr>) will do. You may want to read the fine print shipping with some of the text editors available for <em>Apple</em>&#8217;s or <em>Microsoft</em>&#8217;s operating systems though, as not all of them are really using <em>plain</em> text.</p>
+    <p>For larger projects, I prefer <a rel="external" href="https://atom.io/">Atom</a> (see funny &#8220;video commercial&#8221; above), but <a rel="external" href="https://wiki.gnome.org/Apps/Gedit">gedit</a> (cross-platform) is just as fine. And that&#8217;s it.</p>
+    </div><!-- /grid-6 -->
+    </div><!-- /row -->
+
+    <div class="row section-body siteinfo">
+    <div class="grid-6">
+    <h3>Copyright</h3>
+    <p>Content by <a rel="external" href="https://gwpachlatko.github.io/">G.W.&nbsp;Pachlatko</a> (<abbr>WTFPL</abbr>) &middot; Meyer’s Reset by <a rel="external" href="http://meyerweb.com/eric/">Eric A. Meyer</a> (Public Domain) &middot; Clipboard conceived by <a rel="external" href="https://zenorocha.com/">Zeno Rocha</a> (<abbr>MIT</abbr>) &middot; Responsive Navigation based upon work by <a rel="external" href="http://viljamis.com/">Viljami Salminen</a> (<abbr>MIT</abbr>) &middot;
+    Accessible Smooth Scrolling conceived by <a rel="external" href="http://www.heydonworks.com/">Heydon Pickering</a> (<abbr>MIT</abbr>)</p>
+    </div><!-- /grid-6 -->
+
+    <div class="grid-6">
+    <h3>Design</h3>
+    <p class="origin">Typefaces: <a rel="external" title="visit home page of Huerta Tipogr&aacute;fica" href="http://www.huertatipografica.com/">Alegreya and Alegreya Sans</a> &middot; Theme: &#8220;Cheat Sheet&#8221;, hand crafted by <a title="contact this website’s designer" href="mailto:gwpachlatko@gmail.com">G.W.&nbsp;Pachlatko</a></p>
+    </div><!-- /grid-6 -->
+    </div><!-- /row -->
+  </section><!-- /resources -->
+</footer>
+<!-- To avoid slow page loading, put Javascripts that don’t depend on loading order here. -->
+
+<!-- SMOOTH SCROLLING W/ PROPER FOCUSING -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+<script src="js/jquery.min.js"></script>
+<script>
+/* Basics lifted from a CSS Tricks demo (http://css-tricks.com/snippets/jquery/smooth-scrolling/), with focus() and URL hash updating added where commented */
+
+$(function() {
+  /* ADDED: make sections focusable */
+  $('section[id]').attr('tabindex', '-1');
+  /* end ADDED */
+  $('a[href*=#]:not([href=#])').click(function() {
+    var $linkElem = $(this);
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          /* ADDED: focus the target */
+          target.focus();
+          /* end ADDED */
+          /* ADDED: update the URL */
+          window.location.hash = $linkElem.attr('href').substring(1);
+         // window.location.hash = $(this).attr('href').substring(1, $(this).attr('href').length);
+          /* end ADDED */
+        });
+        return false;
+      }
+    }
+  });
+});
+</script>
+<!-- End of SMOOTH SCROLLING W/ PROPER FOCUSING -->
+
+<!-- UNIVERSAL VIDEO PLAYER -->
+<script src="js/modernizr.js"></script>
+<script src="js/px-video.js"></script>
+<script>
+// Initialize
+var video1 = new InitPxVideo({
+	"videoId": "indie",
+	"captionsOnDefault": false,
+	"seekInterval": 20,
+	"videoTitle": "Ind.ie Launch",
+	"debug": true
+});
+
+</script>
+<!-- End of UNIVERSAL VIDEO PLAYER -->
+
+<script src="js/fastclick.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/fixed-responsive-nav.js"></script>
+
+  </body>
+</html>
